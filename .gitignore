@@ -1,3 +1,4 @@
+# Ignores items with the word temp (Case insensitive)
 *[Tt][Ee][Mm][Pp]*
 
 # Compiled class file
