@@ -26,11 +26,23 @@ public class Lab01_Practice {
 		return true;
 	}
 
+	public static boolean palindromeWithoutArray(int n) {
+		int rev = 0;
+		int n_copy = n;
+		while (n_copy > 0) {
+			int digit = n_copy % 10;
+			n_copy /= 10;
+			rev *= 10; rev += digit;
+		}
+		System.out.println(rev);
+		return (rev == n);
+	}
+
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 		System.out.print("Enter a number: ");
 		int n = in.nextInt();
 		// System.out.println(palindromeWithArray(n));
-		palindromeWithoutArray(n);
+		System.out.println(palindromeWithoutArray(n));
 	}
 }
