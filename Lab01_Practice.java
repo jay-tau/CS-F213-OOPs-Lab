@@ -49,5 +49,7 @@ public class Lab01_Practice {
 			System.out.println("YES");
 		else
 			System.out.println("NO");
+
+		in.close();
 	}
 }
