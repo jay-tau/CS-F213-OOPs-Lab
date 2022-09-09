@@ -34,15 +34,20 @@ public class Lab01_Practice {
 			n_copy /= 10;
 			rev *= 10; rev += digit;
 		}
-		System.out.println(rev);
+		// System.out.println(rev);
 		return (rev == n);
 	}
 
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
-		System.out.print("Enter a number: ");
+		// System.out.print("Enter a number: ");
 		int n = in.nextInt();
 		// System.out.println(palindromeWithArray(n));
-		System.out.println(palindromeWithoutArray(n));
+		// System.out.println(palindromeWithoutArray(n));
+
+		if (palindromeWithArray(n) && palindromeWithoutArray(n))
+			System.out.println("YES");
+		else
+			System.out.println("NO");
 	}
 }
