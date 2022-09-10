@@ -1,3 +1,9 @@
+/*
+ * Write a program to check whether a given number (n-digit number) is armstrong or not. Print YES if it is an armstrong number and NO if it is not an armstrng number.
+ * Definition: An Armstrong number is an integer such that the sum of its digits raise to the power of n is equal to the number itself.
+ * For Example: For example for a 3 digit number, 371 is an Armstrong number since 3^3 + 7^3 + 1^3 = 371
+ */
+
 import java.util.*;
 
 public class Lab01_Armstrong {
