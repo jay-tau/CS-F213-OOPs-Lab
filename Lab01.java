@@ -1,3 +1,7 @@
+/*
+ * Given an array, find the largest and second largest element in the array without sorting the array. Assume that all the elements are positive int. (Do not use any java Library functions)
+ */
+
 import java.util.Scanner;
 
 public class Lab01 {
