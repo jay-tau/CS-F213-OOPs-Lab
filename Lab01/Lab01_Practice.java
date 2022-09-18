@@ -2,6 +2,8 @@
  * A palindrome is a sequence that reads the same backward as forward. Complete the Java program given that takes a non-negative integer as input and checks whether the given number is a palindrome. It will Print “YES” if the given number is a palindrome, and print “NO” in all other cases. (Do not use any java Library functions)
  */
 
+package Lab01;
+
 import java.util.*;
 
 public class Lab01_Practice {

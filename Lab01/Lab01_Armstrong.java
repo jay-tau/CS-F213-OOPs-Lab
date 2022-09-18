@@ -4,6 +4,8 @@
  * For Example: For example for a 3 digit number, 371 is an Armstrong number since 3^3 + 7^3 + 1^3 = 371
  */
 
+package Lab01;
+
 import java.util.*;
 
 public class Lab01_Armstrong {
