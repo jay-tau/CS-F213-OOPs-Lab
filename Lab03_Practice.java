@@ -19,12 +19,14 @@ public class Lab03_Practice {
 	public static String returnFirstRepeatedCharacter(String s) {
 		int[] char_count = new int[26]; // All values are initialised to 0 by default
 		for (int i = 0; i < s.length(); i++) {
-			
+			char_count[s.charAt(i) - 'a']++;
+
 			if (char_count[s.charAt(i) - 'a'] > 1)
 				return ("" + s.charAt(i));
 		}
 		return "-1";
 	}
+
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		String s = sc.next();
