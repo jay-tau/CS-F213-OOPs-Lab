@@ -1,22 +1,22 @@
 package Lab05_Practice;
 /*
  * Lab 5 - Practice Question
-For this question, you will simulate the basic movement of Chess Pieces. For now, you will be dealing with only 2 pieces (Rook & King).
-
-Your task will be to check if a particular move for a piece is valid or not.
-
-You essentially have to complete a method of the form:
-
-public boolean isValidMove(int destRank, int destFile)
-This function checks if the given piece, given its initial location can move to the specified destination location. The initial location of the piece would be available via super.getRank() and super.getFile() methods.
-
-Since each piece has a very different movement pattern, we split them into multiple different classes having a similar structure. The structure of each of the classes is defined by the Super-Class (ChessPiece in this case)
-
-NOTE:
-
-If the destination location is the same as the initial location, then the move is NOT valid.
-
-Code ONLY in the sections mentioned in the starter code. DO NOT code anywhere else.
+ * For this question, you will simulate the basic movement of Chess Pieces. For now, you will be dealing with only 2 pieces (Rook & King).
+ *
+ * Your task will be to check if a particular move for a piece is valid or not.
+ *
+ * You essentially have to complete a method of the form:
+ *
+ * public boolean isValidMove(int destRank, int destFile
+ * This function checks if the given piece, given its initial location can move to the specified destination location. The initial location of the piece would be available via super.getRank() and super.getFile() methods.
+ *
+ * Since each piece has a very different movement pattern, we split them into multiple different classes having a similar structure. The structure of each of the classes is defined by the Super-Class (ChessPiece in this case)
+ *
+ * NOTE:
+ *
+ * If the destination location is the same as the initial location, then the move is NOT valid.
+ *
+ * Code ONLY in the sections mentioned in the starter code. DO NOT code anywhere else.
  */
 
 

@@ -1,98 +1,93 @@
 /*
  * Lab 5 - Question 1
-Create 2 classes 'Stack' and 'Queue'. Both extend the 'Lab05_Q1' class
-
-'Stack' is a data Lab05_Q1 where the LAST element added to it is the FIRST one to be removed. 'Queue' is a data Lab05_Q1 where the FIRST element added to it is the FIRST one to be removed.
-
-Both these Lab05_Q1s are to be internally represented by an int array. The internal array is called data and it is defined in the Lab05_Q1 class. Its access type is set to protected. This means that the Sub-Classes can access it.
-
-The max size of the Lab05_Q1 is defined and stored in the 'Lab05_Q1' class.
-
-You have to implement 4 methods for each of the classes ('Stack' and 'Queue')
-
-public boolean push(int e): Adds an element to the Stack/Queue. Returns true if it is successfully added to the Lab05_Q1. False otherwise.
-public int peek(): Returns the element WITHOUT removing it from the Lab05_Q1. In case the Lab05_Q1 is empty, returns -1
-public int pop(): Returns AND removes the element from the Lab05_Q1. In case the Lab05_Q1 is empty, returns -1
-public int size(): Returns the number of elements present in the Lab05_Q1
-NOTE: You might need to create more methods in the Lab05_Q1 class to ensure that code is working. BUT DO ONLY IN THE ALLOWED SPACE
-
-You are also to implement a STATIC method in the 'Lab05_Q1' class which takes the name and size of the Lab05_Q1 as input and returns an instance of the specified Lab05_Q1
-
-public static Lab05_Q1 createLab05_Q1(String type, int size)
-Also, override the toString method of ONLY the 'Lab05_Q1' class such that it should return the output of the following format: < TYPE >: < Space Separated Array Elements >
-
-Example:
-
-If the Lab05_Q1 is a 'Queue', and the elements stored in the array are: [5, 10, 12, 15], the output would be (ignoring the quotes): Queue: 5 10 12 15
-
-If the Lab05_Q1 is a 'Stack' and the elements stored in the array are: [] i.e. it's an empty array, the output would be (ignoring the quotes): Stack:
-
-HINT: To get the elements stored in the array, you can use the functions already implemented in the respective classes
-
-NOTE:
-
-DO NOT modify any of the base code. Only add your code in the space mentioned
-You are NOT ALLOWED to override the toString() method in any class barring the 'Lab05_Q1' class
-Input Format:
-
-The first line will contain a single number ‘m’, denoting the number of Lab05_Q1s in use.
-
-The next line will contain 2 space-separated tokens, first being a string which indicates the type of the Lab05_Q1 (Stack/Queue), and the second is an integer which indicates the size of the Lab05_Q1.
-
-The next line will contain a single number ‘k’, denoting the number of operations.
-
-Next ‘K’ lines follow:
-
-Each line contains 3 space-separated tokens denoting an operation.
-
-The first token is an integer indicating the index of the Lab05_Q1 being used (0 indexed)
-
-The next token is a String denoting the type of operation (push, pop, peek, print)
-
-The last token is an integer.
-
-NOTE: If the operation to be performed is ‘push’, then this token is the value to be pushed into the Lab05_Q1.
-
-Example Test case:
-
-INPUTS:
-
-1
-Stack 10
-4
-0 push 2
-0 push 1
-0 pop -1
-0 print -1
-INPUT EXPLANATION:
-
-A total of 1 Lab05_Q1 is being used, k=1
-The Lab05_Q1 is a Stack of size 10
-4 operations are to be performed
-Push the value 2 into Lab05_Q1[0]
-Push the value 1 into Lab05_Q1[0]
-Pop a value from Lab05_Q1[0]
-Print the contents of Lab05_Q1[0]
-FINAL OUTPUT:
-
-	true
-	true
-	1
-	Stack: 2
-OUTPUT EXPLANATION:
-
-There is only a single Lab05_Q1(Stack of size 10) in play here. First, the value 2 is pushed onto this stack successfully, and true is printed.
-
-Stack contents: [2]
-Then, the value 1 is pushed onto this stack successfully, and true is printed.
-
-Stack contents: [2, 1]
-Then an element is popped from the stack. Since a stack if LIFO, the element 1 is popped, and ‘1’ is printed
-
-Stack contents: [2]
-The contents of the stack are printed:
-
-Stack: 2
+ * Create 2 classes 'Stack' and 'Queue'. Both extend the 'Lab05_Q1' class
+ *
+ * 'Stack' is a data Lab05_Q1 where the LAST element added to it is the FIRST one to be removed. 'Queue' is a data Lab05_Q1 where the FIRST element added to it is the FIRST one to be removed.
+ *
+ * Both these Lab05_Q1s are to be internally represented by an int array. The internal array is called data and it is defined in the Lab05_Q1 class. Its access type is set to protected. This means that the Sub-Classes can access it.
+ *
+ * The max size of the Lab05_Q1 is defined and stored in the 'Lab05_Q1' class.
+ *
+ * You have to implement 4 methods for each of the classes ('Stack' and 'Queue')
+ *
+ * public boolean push(int e): Adds an element to the Stack/Queue. Returns true if it is successfully added to the Lab05_Q1. False otherwise.
+ * public int peek(): Returns the element WITHOUT removing it from the Lab05_Q1. In case the Lab05_Q1 is empty, returns -1
+ * public int pop(): Returns AND removes the element from the Lab05_Q1. In case the Lab05_Q1 is empty, returns -1
+ * public int size(): Returns the number of elements present in the Lab05_Q
+ * NOTE: You might need to create more methods in the Lab05_Q1 class to ensure that code is working. BUT DO ONLY IN THE ALLOWED SPACE
+ *
+ * You are also to implement a STATIC method in the 'Lab05_Q1' class which takes the name and size of the Lab05_Q1 as input and returns an instance of the specified Lab05_Q1
+ *
+ * public static Lab05_Q1 createLab05_Q1(String type, int size)
+ * Also, override the toString method of ONLY the 'Lab05_Q1' class such that it should return the output of the following format: < TYPE >: < Space Separated Array Elements >
+ *
+ * Example:
+ *
+ * If the Lab05_Q1 is a 'Queue', and the elements stored in the array are: [5, 10, 12, 15], the output would be (ignoring the quotes): Queue: 5 10 12 15
+ *
+ * If the Lab05_Q1 is a 'Stack' and the elements stored in the array are: [] i.e. it's an empty array, the output would be (ignoring the quotes): Stack:
+ *
+ * HINT: To get the elements stored in the array, you can use the functions already implemented in the respective classes
+ *
+ * NOTE:
+ *
+ * DO NOT modify any of the base code. Only add your code in the space mentioned
+ * You are NOT ALLOWED to override the toString() method in any class barring the 'Lab05_Q1' class
+ * Input Format:
+ *
+ * The first line will contain a single number ‘m’, denoting the number of Lab05_Q1s in use.
+ *
+ * The next line will contain 2 space-separated tokens, first being a string which indicates the type of the Lab05_Q1 (Stack/Queue), and the second is an integer which indicates the size of the Lab05_Q1.
+ *
+ * The next line will contain a single number ‘k’, denoting the number of operations.
+ *
+ * Next ‘K’ lines follow:
+ *
+ * Each line contains 3 space-separated tokens denoting an operation.
+ *
+ * The first token is an integer indicating the index of the Lab05_Q1 being used (0 indexed)
+ *
+ * The next token is a String denoting the type of operation (push, pop, peek, print)
+ *
+ * The last token is an integer.
+ *
+ * NOTE: If the operation to be performed is ‘push’, then this token is the value to be pushed into the Lab05_Q1.
+ *
+ * Example Test case:
+ *
+ * INPUTS:
+ * 1
+ * Stack 10
+ * 4
+ * 0 push 2
+ * 0 push 1
+ * 0 pop -1
+ * 0 print -1
+ *
+ * INPUT EXPLANATION:
+ * A total of 1 Lab05_Q1 is being used, k=1
+ * The Lab05_Q1 is a Stack of size 10
+ * 4 operations are to be performed
+ * Push the value 2 into Lab05_Q1[0]
+ * Push the value 1 into Lab05_Q1[0]
+ * Pop a value from Lab05_Q1[0]
+ * Print the contents of Lab05_Q1[0]
+ *
+ * FINAL OUTPUT:
+ * true
+ * true
+ * 1
+ * Stack: 2
+ *
+ * OUTPUT EXPLANATION:
+ * There is only a single Lab05_Q1(Stack of size 10) in play here. First, the value 2 is pushed onto this stack successfully, and true is printed.
+ * Stack contents: [2]
+ * Then, the value 1 is pushed onto this stack successfully, and true is printed.
+ * Stack contents: [2, 1]
+ * Then an element is popped from the stack. Since a stack if LIFO, the element 1 is popped, and ‘1’ is printed
+ * Stack contents: [2]
+ * The contents of the stack are printed:
+ * Stack: 2
 */
 
 import java.util.Scanner;

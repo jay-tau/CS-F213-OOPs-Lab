@@ -1,61 +1,52 @@
 /*
  * Lab 5 - Question 2
-You are given n pairs of integers(x, y). Each pair is modelled as a Pair class.
-
-Your task is to implement the 2 methods:
-
-private static int solveUnique(Object[] pairs)
-private static int solveSimilar(Object[] pairs)
-solveUnique() method creates the largest possible subsequence arr such that every element in this array is unique and returns the length of the array
-
-solveSimilar() method creates the largest possible susequence arr such that the score of any 2 elements in the array is the same and and returns the length of the array.
-
-An element in an array is said to be unique for all elements in the array if their corresponding (x, y) values are not equal.
-
-The score of a Pair (x, y) is defined as:
-
-Ceil( (100 * (sin(x) + tanh(y) ) ) ) % 10
-NOTE: Only code in the sections mentioned in the starter code. DO NOT code anywhere else
-
-INPUT FORMAT: The first line contains a single integer ‘n’ denoting the number of pairs
-
-‘n’ lines follow
-
-Each of the next ‘n’ lines contains 2 space-separated integers denoting the (x, y) values of the ‘Pair’ object.
-
-OUTPUT FORMAT:
-
-The output consists of 2 lines, each containing a single integer value.
-
-The first line contains the output of the ‘solveUnique’ function.
-
-The second line contains the output of the ‘solveSimilar’ function.
-
-EXAMPLE:
-
-INPUTS
-
-3           # (n=3)
-0 0         # (x=0, y=0 for pair 1)
-1 1         # (x=1, y=1 for pair 2)
-0 0         # (x=0, y=0 for pair 3)
-OUTPUTS:
-
-2
-2
-OUTPUT EXPLANATION:
-
-The largest possible subsequence of pairs is Pair1(0, 0) and Pair2(1, 1)
-
-Hence the output of solveUnique is 2
-
-The Score of Pair1 = 0
-
-The Score of Pair2 = 1
-
-The Score of Pair3 = 0
-
-Hence the output of solveSimilar is 2
+ * You are given n pairs of integers(x, y). Each pair is modelled as a Pair class.
+ *
+ * Your task is to implement the 2 methods:
+ *
+ * private static int solveUnique(Object[] pairs)
+ * private static int solveSimilar(Object[] pairs)
+ * solveUnique() method creates the largest possible subsequence arr such that every element in this array is unique and returns the length of the array
+ *
+ * solveSimilar() method creates the largest possible susequence arr such that the score of any 2 elements in the array is the same and and returns the length of the array.
+ *
+ * An element in an array is said to be unique for all elements in the array if their corresponding (x, y) values are not equal.
+ *
+ * The score of a Pair (x, y) is defined as:
+ *
+ * Ceil( (100 * (sin(x) + tanh(y) ) ) ) % 10
+ * NOTE: Only code in the sections mentioned in the starter code. DO NOT code anywhere else
+ *
+ * INPUT FORMAT: The first line contains a single integer ‘n’ denoting the number of pairs
+ *
+ * ‘n’ lines follow
+ *
+ * Each of the next ‘n’ lines contains 2 space-separated integers denoting the (x, y) values of the ‘Pair’ object.
+ *
+ * OUTPUT FORMAT:
+ * The output consists of 2 lines, each containing a single integer value.
+ * The first line contains the output of the ‘solveUnique’ function.
+ * The second line contains the output of the ‘solveSimilar’ function.
+ *
+ * EXAMPLE:
+ *
+ * INPUTS
+ * 3           # (n=3)
+ * 0 0         # (x=0, y=0 for pair 1)
+ * 1 1         # (x=1, y=1 for pair 2)
+ * 0 0         # (x=0, y=0 for pair 3)
+ *
+ * OUTPUTS:
+ * 2
+ * 2
+ *
+ * OUTPUT EXPLANATION:
+ * The largest possible subsequence of pairs is Pair1(0, 0) and Pair2(1, 1)
+ * Hence the output of solveUnique is 2
+ * The Score of Pair1 = 0
+ * The Score of Pair2 = 1
+ * The Score of Pair3 = 0
+ * Hence the output of solveSimilar is 2
  */
 
 import java.util.Scanner;
