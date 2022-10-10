@@ -1,3 +1,31 @@
+/*
+ * Lab 3 - Question 2:
+ *
+ * Chandler has 2 friends “joey” and “Dhamo”. There is a string given and she wants to know if that string is good or bad.
+ *
+ * A string is good if and only if it contains one of Chandler's friends' name exactly once.
+ *
+ * Note: The problem is case-sensitive.
+ *
+ * Input:
+ *
+ * The only line contains string from lowercase and uppercase letters.
+ *
+ * Output:
+ *
+ * Print "Good", if the string is good, and "Bad" otherwise.
+ *
+ * Hint:
+ *
+ * For string input, You can use scanner class
+ *
+ * Scanner sc = new Scanner(System.in);
+ *
+ * String s = sc.next();
+ */
+
+
+
 import java.util.*;
 
 public class Lab03_Q2 {
