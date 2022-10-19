@@ -1,3 +1,70 @@
+/*
+ * We are designing a game. There are two game characters we are starting with, Archer and Wizard.
+ *
+ * You have to complete the abstract class, GameCharacter, by adding the following abstract methods:
+ *
+ * public void attack(GameCharacter target)
+ * public void fatalAttack(GameCharacter target)
+ * Also, implement a method in this class:
+ * public void takeDamage(int damage) : Decreases the health by the input given.
+ * Health cannot be negative.
+ * Complete the Archer and Wizard class by extending the GameCharacter class and doing the following:
+ *
+ * Make two constructors for Archer. One with the parameter String name and default value for health = 200 and numofarrows = 20. Other constructor with the parameters String name, int health, int numOfArrows.
+ *
+ * Make similar constructors for Wizard. Put the default value for mana = 200.
+ *
+ * The constructors should print the following “Creating an Archer named <name> with <value> health and <value> arrows” with the respective values of health and arrows for Archer. The constructors should print the following “Creating a Wizard named <name> with <value> health and <value> mana” with the respective values of health and mana for Wizard.
+ *
+ * Implement the abstract methods, attack and fatalAttack as follows:
+ *
+ * i. Attack method for Archer does damage to the target with the value = 10 and uses 1 arrow.
+ *
+ * ii. FatalAttack method does damage to the target with the value = 40 and uses 5 arrows.
+ *
+ * If arrows are not sufficient, print “Not enough arrows”.
+ *
+ * Similar to be done for Wizard except:
+ * i. For the attack method, put damage = 25 and use 25 mana.
+ *
+ * ii. For the fatalAttack method, put damage = 60 and use 75 mana.
+ *
+ * If mana is not sufficient, print “Not enough mana”.
+ *
+ * For the public class Question1, implement the following methods:
+ *
+ * public static void playerAttack(GameCharacter player1, GameCharacter player2, String type) : If the type is “attack”, then print “<CharacterName1> attempts to attack <CharacterName2>” and attack. If the type is “fatalAttack”, then print “<CharacterName1> attempts to attack heavily on <CharacterName2>” and do a fatal attack. Replace the tags with the input name
+ * public static void identify(GameCharacter player): It should print “Name: <name>, Health: <health>, Arrows: <arrows>” for Archer and print “Name: , Health: <health>, Mana: <mana>” for Wizard.
+ * Note:
+ *
+ * DO NOT modify any of the base code. Only add your code in the space mentioned.
+ * <Tag> denotes that they have to be replaced with the respective input.
+ *
+ * Input format:
+ *
+ * The first line is either “Archer” or “Wizard” for the first character.
+ * The next line is the name of the character, its health and its arrows or mana.
+ * The next line is either “Archer” or “Wizard” for the second character.
+ * The next line is the name of the character, its health and its arrows or mana.
+ * The next line is the number of total attacks by both the characters.
+ * The next lines, depending on the previous input, will be in the format 1 attack or 1 fatal or 2 attack or 2 fatal where 1 attack means that player 1 is attempting a normal attack on player 2.
+ *
+ * Output format:
+ *
+ * The first two lines are the details about the characters being created.
+ *
+ * For every attack, three lines are printed:
+ *
+ * First line is about who is attacking.
+ *
+ * Second line is about the current health and resources of the first player.
+ *
+ * Third line is about the current health and resources of the second player.
+ *
+ */
+
+
+
 import java.util.Scanner;
 
 abstract class GameCharacter {

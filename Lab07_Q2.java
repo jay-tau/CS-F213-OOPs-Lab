@@ -1,3 +1,50 @@
+/*
+ * We have three classes - Shape, Circle, Rectangle.
+ *
+ * You have to complete the abstract class, Shape, by adding the following abstract methods:
+ *
+ * public double getArea()
+ *
+ * public boolean fitOtherShape(Shape shape)
+ *
+ * For the Circle class, you have to extend the Shape class and add the following:
+ *
+ * Create the constructor with the given parameters.
+ * Implement the getArea method for the circle and return a double value (rounded upto two decimal places).
+ * Implement the fitOtherShape method, where the method checks whether the current circle can fit another circle or a rectangle inside it. (Perfect Overlap is allowed)
+ * Override the toString method by returning the following Circle <name> having area <value>
+ * Do the same work for Rectangle class.
+ *
+ * For the public class Question2, implement the following method:
+ *
+ * public static void smallerShapes(int index, Shapes[] shapes) : Array shapes have all the input shapes. Method should print the count of the shapes that can fit inside the shape at the given index. It should also print each shape in order, as they appear in the shapes array.
+ *
+ * Note:
+ *
+ * DO NOT modify any of the base code. Only add your code in the space mentioned.
+ * <Tag> denotes that they have to be replaced with the respective input.
+ *
+ * Input format:
+ *
+ * The first line is the number of shapes to be input.
+ *
+ * For every shape, there are 2 lines:
+ *
+ * First line is the shape type, whether Circle or Rectangle
+ *
+ * Second line is the name and radius, for Circle and name, length and width for Rectangle.
+ *
+ * Last line is the index of the shape that is to be compared with other shapes, other than itself. (indexed from 1)
+ *
+ * Output format:
+ *
+ * The first line displays the number of shapes that can fit inside shapes[index]
+ *
+ * The next lines print the shapes that can fit inside.
+ */
+
+
+
 import java.util.Scanner;
 
 abstract class Shape {
