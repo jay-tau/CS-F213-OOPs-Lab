@@ -330,5 +330,6 @@ public class Lab05_Q1 {
 				System.out.println(Lab05_Q1s[idx]);
 			}
 		}
+		sc.close();
 	}
 }
