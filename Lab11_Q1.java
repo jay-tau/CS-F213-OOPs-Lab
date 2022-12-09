@@ -1,3 +1,38 @@
+/*
+ * Problem Description
+ * Given a string A denoting a stream of lowercase alphabets, you have to make a new string B. B is formed such that we have to find the first non-repeating character each time a character is inserted to the stream and append it at the end to B. If no non-repeating character is found, append '#' at the end of B.
+ *
+ * Example Input:
+ *
+ * Input:
+ * A = abadbc
+ * Output:
+ * aabbdd
+ *
+ * Explanation:
+ *
+ * "a" - first non repeating character 'a'
+ * "ab" - first non repeating character 'a'
+ * "aba" - first non repeating character 'b'
+ * "abad" - first non repeating character 'b'
+ * "abadb" - first non repeating character 'd'
+ * "abadbc" - first non repeating character 'd'
+ *
+ * Input:
+ * A = abcabc
+ * Output:
+ * aaabc#
+ *
+ * Explanation:
+ *
+ * "a" - first non repeating character 'a'
+ * "ab" - first non repeating character 'a'
+ * "abc" - first non repeating character 'a'
+ * "abca" - first non repeating character 'b'
+ * "abcab" - first non repeating character 'c'
+ * "abcabc" - no non repeating character so '#'
+ */
+
 import java.util.*;
 
 public class Lab11_Q1 {
