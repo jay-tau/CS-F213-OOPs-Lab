@@ -1,43 +1,24 @@
-package Lab05_Practice;
-/*
- * Lab 5 - Practice Question
- * For this question, you will simulate the basic movement of Chess Pieces. For now, you will be dealing with only 2 pieces (Rook & King).
- *
- * Your task will be to check if a particular move for a piece is valid or not.
- *
- * You essentially have to complete a method of the form:
- *
- * public boolean isValidMove(int destRank, int destFile
- * This function checks if the given piece, given its initial location can move to the specified destination location. The initial location of the piece would be available via super.getRank() and super.getFile() methods.
- *
- * Since each piece has a very different movement pattern, we split them into multiple different classes having a similar structure. The structure of each of the classes is defined by the Super-Class (ChessPiece in this case)
- *
- * NOTE:
- *
- * If the destination location is the same as the initial location, then the move is NOT valid.
- *
- * Code ONLY in the sections mentioned in the starter code. DO NOT code anywhere else.
- */
-
 
 import java.util.Scanner;
 
-public class ChessPiece {
+public class Lab05_Practice_ChessPiece {
 	private int rank;
 	private int file;
 	private String color;
 
 	/*
 	 * The 'Rank' of a piece is the row number of the chess board.
-	 * We take the rank to be an integer in the range of 0 to 7          (both inclusive) for our purposes.
+	 * We take the rank to be an integer in the range of 0 to 7 (both inclusive) for
+	 * our purposes.
 	 *
-	 * The 'File' of a piece is the column number of the chess           board.
-	 * We take the file to be an integer in the range of 0 to 7          (both inclusive) for our purposes.
+	 * The 'File' of a piece is the column number of the chess board.
+	 * We take the file to be an integer in the range of 0 to 7 (both inclusive) for
+	 * our purposes.
 	 *
-	 * Each piece has a 'color' which is either 'white' or               'black'.
+	 * Each piece has a 'color' which is either 'white' or 'black'.
 	 */
 
-	public ChessPiece(int rank, int file, String color) {
+	public Lab05_Practice_ChessPiece(int rank, int file, String color) {
 		this.rank = rank;
 		this.file = file;
 		this.color = color;
@@ -80,7 +61,7 @@ public class ChessPiece {
 
 		int n = Integer.parseInt(sc.nextLine());
 
-		ChessPiece[] pieces = new ChessPiece[n];
+		Lab05_Practice_ChessPiece[] pieces = new Lab05_Practice_ChessPiece[n];
 		for (int i = 0; i < n; i++) {
 			String[] inputs = sc.nextLine().split(" ");
 			String type = inputs[0];
@@ -111,15 +92,17 @@ public class ChessPiece {
 	}
 }
 
-class King extends ChessPiece {
+class King extends Lab05_Practice_ChessPiece {
 	public King(int rank, int file, String color) {
 		super(rank, file, color);
 	}
 
 	/*
-	 * This function returns true if the King can move to the           final destination square given the initial position.
+	 * This function returns true if the King can move to the final destination
+	 * square given the initial position.
 	 *
-	 * The initial position can be accessed using                       (super.getRank() & super.getFile()) methods.
+	 * The initial position can be accessed using (super.getRank() &
+	 * super.getFile()) methods.
 	 *
 	 * The King can move one square in any direction.
 	 */
@@ -139,18 +122,21 @@ class King extends ChessPiece {
 	}
 }
 
-class Rook extends ChessPiece {
+class Rook extends Lab05_Practice_ChessPiece {
 
 	public Rook(int rank, int file, String color) {
 		super(rank, file, color);
 	}
 
 	/*
-	 * This function returns true if the Rook can move to the            final destination square given the initial position.
+	 * This function returns true if the Rook can move to the final destination
+	 * square given the initial position.
 	 *
-	 * The initial position can be accessed using                       (super.getRank() & super.getFile()) methods.
+	 * The initial position can be accessed using (super.getRank() &
+	 * super.getFile()) methods.
 	 *
-	 * The Rook can move any number of squares in a straight line       (horizontally or vertically).
+	 * The Rook can move any number of squares in a straight line (horizontally or
+	 * vertically).
 	 */
 	@Override
 	public boolean isValidMove(int destRank, int destFile) {
