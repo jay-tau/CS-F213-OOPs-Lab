@@ -2,14 +2,12 @@
  * A palindrome is a sequence that reads the same backward as forward. Complete the Java program given that takes a non-negative integer as input and checks whether the given number is a palindrome. It will Print “YES” if the given number is a palindrome, and print “NO” in all other cases. (Do not use any java Library functions)
  */
 
-package Lab01;
-
 import java.util.*;
 
 public class Lab01_Practice {
 
 	public static boolean palindromeWithArray(int n) {
-		int[] a = new int[]{-1, -1, -1, -1, -1, -1, -1, -1, -1, -1};
+		int[] a = new int[] { -1, -1, -1, -1, -1, -1, -1, -1, -1, -1 };
 		// Initialize the array with digits of n
 		int free_index = 0;
 		while (n > 0) {
@@ -23,7 +21,7 @@ public class Lab01_Practice {
 		}
 		// System.out.println(free_index);
 		// System.out.println(Arrays.toString(a));
-		for (int i = 0; i <= ((free_index - 1)/2); i++) {
+		for (int i = 0; i <= ((free_index - 1) / 2); i++) {
 			if (a[i] != a[free_index - i]) {
 				// System.out.println(a[i] + " " + a[free_index - 1 - i]);
 				return false;
@@ -38,7 +36,8 @@ public class Lab01_Practice {
 		while (n_copy > 0) {
 			int digit = n_copy % 10;
 			n_copy /= 10;
-			rev *= 10; rev += digit;
+			rev *= 10;
+			rev += digit;
 		}
 		// System.out.println(rev);
 		return (rev == n);
