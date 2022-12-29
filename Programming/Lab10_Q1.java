@@ -64,7 +64,7 @@ public class Lab10_Q1 {
          * }
          */
 
-        Iterator iter_guess = (letter_count_guess.keySet()).iterator();
+        Iterator<Character> iter_guess = (letter_count_guess.keySet()).iterator();
         int cows = 0;
         while (iter_guess.hasNext()) {
             Character key = (Character) iter_guess.next();
