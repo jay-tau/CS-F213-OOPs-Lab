@@ -13,35 +13,34 @@
  * Print Error for any other choice (default).
  */
 
-package Lab02.Lab02_Question2;
-
 import java.util.*;
 
-public class Complex {
+public class Lab02_Q2_Complex {
 	public int real = 0;
 	public int complex = 0;
 
-	public Complex(int real, int complex) { // Constructor
+	public Lab02_Q2_Complex(int real, int complex) { // Constructor
 		this.real = real;
 		this.complex = complex;
 	}
 
-	public void add(Complex num) {
+	public void add(Lab02_Q2_Complex num) {
 		this.real += num.real;
 		this.complex += num.complex;
 		this.print();
 	}
 
-	public void multiply(Complex num) {
+	public void multiply(Lab02_Q2_Complex num) {
 		int real = ((this.real * num.real) - (this.complex * num.complex));
 		int complex = ((this.real * num.complex) + (this.complex * num.real));
 
-		this.real = real; this.complex = complex;
+		this.real = real;
+		this.complex = complex;
 
 		this.print();
 	}
 
-	public void subtract(Complex num) {
+	public void subtract(Lab02_Q2_Complex num) {
 		this.real -= num.real;
 		this.complex -= num.complex;
 		this.print();
@@ -55,10 +54,10 @@ public class Complex {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int a = sc.nextInt(), b = sc.nextInt();
-		Complex c_1 = new Complex(a, b);
+		Lab02_Q2_Complex c_1 = new Lab02_Q2_Complex(a, b);
 		// c_1.print();
 		int p = sc.nextInt(), q = sc.nextInt();
-		Complex c_2 = new Complex(p, q);
+		Lab02_Q2_Complex c_2 = new Lab02_Q2_Complex(p, q);
 		// c_2.print();
 
 		int choice = sc.nextInt();
