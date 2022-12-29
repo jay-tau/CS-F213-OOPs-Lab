@@ -36,11 +36,9 @@
  * The first rectangle has a length of 4 and a width of 5. The second rectangle has a length of 5 and a width of 4. They have the same area and are equivalent.
  */
 
-
-
 import java.util.Scanner;
 
-class Circle implements Comparable { // Something changes on this line
+class Circle implements Comparable<Object> { // Something changes on this line
     private int radius;
 
     public Circle(int radius) {
@@ -51,19 +49,19 @@ class Circle implements Comparable { // Something changes on this line
         return Math.PI * radius * radius;
     }
 
-	@Override
-	public int compareTo(Object o) {
-		Circle c = (Circle) o;
-		if (this.radius > c.radius)
-			return 1;
-		else if (this.radius < c.radius)
-			return -1;
-		else
-			return 0;
-	}
+    @Override
+    public int compareTo(Object o) {
+        Circle c = (Circle) o;
+        if (this.radius > c.radius)
+            return 1;
+        else if (this.radius < c.radius)
+            return -1;
+        else
+            return 0;
+    }
 }
 
-class Rectangle implements Comparable { // Something changes on this line
+class Rectangle implements Comparable<Object> { // Something changes on this line
     private int length, width;
 
     public Rectangle(int length, int width) {
@@ -75,16 +73,16 @@ class Rectangle implements Comparable { // Something changes on this line
         return length * width;
     }
 
-	@Override
-	public int compareTo(Object o) {
-		Rectangle r = (Rectangle) o;
-		if (this.getArea() > r.getArea())
-			return 1;
-		else if (this.getArea() < r.getArea())
-			return -1;
-		else
-			return 0;
-	}
+    @Override
+    public int compareTo(Object o) {
+        Rectangle r = (Rectangle) o;
+        if (this.getArea() > r.getArea())
+            return 1;
+        else if (this.getArea() < r.getArea())
+            return -1;
+        else
+            return 0;
+    }
 }
 
 public class Lab06_Practice {
@@ -108,7 +106,7 @@ public class Lab06_Practice {
         System.out.println(isEquivalent(r1, r2));
     }
 
-    static boolean isEquivalent(Comparable ele1, Comparable ele2) {
+    static boolean isEquivalent(Comparable<Object> ele1, Comparable<Object> ele2) {
         return ele1.compareTo(ele2) == 0;
     }
 }
