@@ -56,5 +56,6 @@ class Lab11_Practice {
             System.out.print(str + " is a pangram.");
         else
             System.out.print(str + " is not a pangram.");
+        sc.close();
     }
 }
