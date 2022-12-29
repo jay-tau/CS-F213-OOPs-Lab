@@ -58,17 +58,17 @@
 
 import java.util.Scanner;
 
-
 interface ReadOnly {
 	int read();
 }
 
 interface ReadWrite {
 	int read();
+
 	void write(int value);
 }
 
-class TimeStamp implements Comparable, ReadOnly { // Something changes on this line
+class TimeStamp implements Comparable<Object>, ReadOnly { // Something changes on this line
 	private int time;
 
 	public TimeStamp(int time) {
@@ -92,7 +92,7 @@ class TimeStamp implements Comparable, ReadOnly { // Something changes on this l
 	}
 }
 
-class DataCell implements Comparable, ReadWrite { // Something changes on this line
+class DataCell implements Comparable<Object>, ReadWrite { // Something changes on this line
 	private int store;
 
 	public DataCell() {
@@ -158,8 +158,8 @@ public class Lab06_Q1 {
 		}
 	}
 
-	static Comparable getMax(Comparable[] array) {
-		Comparable max = array[0];
+	static Comparable<Object> getMax(Comparable<Object>[] array) {
+		Comparable<Object> max = array[0];
 		for (int i = 1; i < array.length; ++i) {
 			if (array[i].compareTo(max) > 0) {
 				max = array[i];
