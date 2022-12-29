@@ -1,4 +1,14 @@
-public class Fraction {
+public class Lecture2_Practice {
+	public static void main(String[] args) {
+		Fraction f1 = new Fraction(1, 2);
+		Fraction f2 = new Fraction(6, 9);
+		System.out.println(f1.num + "/" + f1.denom);
+		System.out.println(f2.num + "/" + f2.denom);
+		Fraction f3 = Fraction.add(f1, f2);
+	}
+}
+
+class Fraction {
 	int num, denom;
 
 	public Fraction(int p, int q) {
@@ -19,7 +29,8 @@ public class Fraction {
 
 	public Fraction reduce() {
 		int gcd = gcd(num, denom);
-		this.num /= gcd; this.denom /= gcd;
+		this.num /= gcd;
+		this.denom /= gcd;
 		return this;
 	}
 
