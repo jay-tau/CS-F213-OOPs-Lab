@@ -3,7 +3,7 @@
  * Write a program to print the given pattern in JAVA for any given n
  *
  * Modify the code as indicated to get the output pattern
- * 
+ *
  * Pattern for n = 3
  * 1 2 3
  *  2 3
