@@ -6,11 +6,9 @@
  * Topics involved : Array, new, method and objects
  */
 
-package Lab02;
-
 import java.util.*;
 
-public class Lab02_Question1 {
+public class Lab02_Q1 {
 
     public static int[] reverse_array(int[] arr) {
         int[] rev_array = new int[10];
@@ -19,7 +17,7 @@ public class Lab02_Question1 {
             rev_array[i] = arr[9 - i];
         }
         // for (int i = 0; i < rev_array.length; i++)
-            // System.out.print(rev_array[i] + " ");
+        // System.out.print(rev_array[i] + " ");
         return rev_array;
     }
 
@@ -29,7 +27,7 @@ public class Lab02_Question1 {
 
         // Bulding the array from an integer
         int[] arr = new int[10];
-        int present_index = 10-1;
+        int present_index = 10 - 1;
         while (n > 0) {
             arr[present_index] = n % 10;
             n /= 10;
@@ -37,7 +35,7 @@ public class Lab02_Question1 {
         }
 
         // for (int i = 0; i < 10; i++)
-            // System.out.print(arr[i] + " ");
+        // System.out.print(arr[i] + " ");
 
         int[] reversed_array = reverse_array(arr);
 
