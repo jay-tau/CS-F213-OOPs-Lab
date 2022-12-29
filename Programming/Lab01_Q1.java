@@ -2,14 +2,12 @@
  * Given an array, find the largest and second largest element in the array without sorting the array. Assume that all the elements are positive int. (Do not use any java Library functions)
  */
 
-package Lab01;
-
 import java.util.Scanner;
 
-public class Lab01 {
+public class Lab01_Q1 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("Input size of array: ");
+		// System.out.print("Input size of array: ");
 		int n = sc.nextInt();
 		int[] a = new int[n];
 		for (int i = 0; i < n; i++) {
