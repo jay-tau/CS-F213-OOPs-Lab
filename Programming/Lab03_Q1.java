@@ -50,8 +50,6 @@
  * String s = sc.next();
  */
 
-
-
 import java.util.*;
 
 public class Lab03_Q1 {
