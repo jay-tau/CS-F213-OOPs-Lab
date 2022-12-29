@@ -1,3 +1,42 @@
+/*
+ * You have to implement a Queue class. The base driver class is given in the question on the left; you have to complete the class. The description for each method is given as comments in the code. Go through them before attempting the problem.
+ *
+ * Note: There are a few syntax errors as well in the code; correct them else the code will not work. Read the comments in the methods for their description.
+ *
+ * Some base information:
+ *
+ * Queue: A queue is defined as a linear data structure that is open at both ends, and the operations are performed in First In First Out (FIFO) order. Front and size are used in this case. FIFO means if you enter 10 20 30 in the queue and then try to remove it from the queue, 10 will be removed as it came in the queue first.
+ *
+ * Think of it as when we all enter the auditorium for Comedy Night. The first in line gets to enter the auditorium and leave the line.
+ *
+ * Input Format:
+ *
+ * 1st Line: Capacity of the queue
+ * 2nd Line: String input
+ * Rest of the lines: Depending on the number of ‘i’ characters present in the string input in the 2nd line.
+ *
+ * Meaning of characters in the string
+ *
+ * i - Input of element in queue
+ * d- remove from queue (according to FIFO)
+ * f- print first element
+ * s- print size
+ * t- print if empty or not
+ * l- list all elements
+ *
+ * Sample Test Case
+ *
+ * Input:
+ *
+ * 2 iidstl 10 20
+ * Output:
+ *
+ * 10 is removed.
+ * 1 is the size.
+ * queue is not empty.
+ * whole queue listed below.
+ * 20
+ */
 
 import java.util.*;
 
@@ -6,7 +45,7 @@ class A {
 	// part. Fix them.
 
 	// static int modulo(int a, int b) {
-	// 	return (a >= 0) ? (a % b) : ((a % b) + Math.abs(b));
+	// return (a >= 0) ? (a % b) : ((a % b) + Math.abs(b));
 	// }
 
 	static class queue {
