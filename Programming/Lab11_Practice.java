@@ -20,7 +20,6 @@
  * Explanation: The word contains 26 instances of 'a'. Since only 25 operations are allowed. We can keep 1 instance and change all others to make str a pangram.
  */
 
-import java.io.*;
 import java.util.*;
 
 class Lab11_Practice {

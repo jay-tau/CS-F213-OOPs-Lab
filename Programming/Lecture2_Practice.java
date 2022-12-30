@@ -5,6 +5,7 @@ public class Lecture2_Practice {
 		System.out.println(f1.num + "/" + f1.denom);
 		System.out.println(f2.num + "/" + f2.denom);
 		Fraction f3 = Fraction.add(f1, f2);
+		System.out.println(f3.num + "/" + f3.denom);
 	}
 }
 

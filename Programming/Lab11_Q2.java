@@ -45,5 +45,6 @@ public class Lab11_Q2 {
         }
         smallestSubsegment(a, n);
 
+        sc.close();
     }
 }
