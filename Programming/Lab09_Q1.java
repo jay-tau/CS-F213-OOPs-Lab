@@ -21,7 +21,7 @@ import java.util.*;
 import java.util.Stack;
 
 class Answer {
-    public boolean validstring(String s) {
+    public boolean validString(String s) {
         Stack<Character> st = new Stack<Character>();
 
         for (int i = 0; i < s.length(); i++) {
@@ -54,7 +54,7 @@ public class Lab09_Q1 {
         Scanner sc = new Scanner(System.in);
         s = sc.next();
         Answer ans = new Answer();
-        System.out.println(ans.validstring(s));
+        System.out.println(ans.validString(s));
         sc.close();
     }
 }
